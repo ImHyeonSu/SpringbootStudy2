@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<h1 style="font-size: 300%; text-align: center">Register Page</h1>
+	<form method="post" action="/register">
+		<div class="container">
+			<h1>register</h1>
+			<div class="form-group">
+				<label for="Email">e-mail: </label> <input type="text"
+					class="form-control" id="Email" name="memEmail" placeholder="email">
+				<button type=button onclick="checkEmail()">confirm</button>
+			</div>
+			<div>
+				<span class=" email_used">used email.</span> <span
+					class="email_can_use">you can use email.</span>
+			</div>
+			<div class="form-group">
+				<label for="Password">password: </label><input type="password"
+					class="form-control" id="Password" name="memPw"
+					placeholder=" password">
+			</div>
+			<div class="form-group">
+				<label for="Name">name: </label> <input type="text"
+					class="form-control" id="Name" name="memName" placeholder="name">
+				<button type=button onclick="checkName()">confirm</button>
+			</div>
+			<div class="form-group">
+				<label for="NickName">nickName+ </label> <input type="text"
+					class="form-control" id="NickName" name="memNick"
+					placeholder="nickname">
+				<button type=button onclick="checkNickName()">confirm</button>
+			</div>
+			<div>
+				<span class="nickname_input_re_0">used nickname.</span> <span
+					class="nickname_input_re_1">can use nickname</span>
+			</div>
+			<div class="form-group">
+				<label for="TelePhone">phoneNumber: </label>
+				<!-- 전화번호 형식대로 박아넣ㄱ디 -->
+				<input type="tel" class="form-control" id="TelePhone"
+					name="memPhone" placeholder="phoneNumber" onkeyup="test(this)"
+					th:text="${msg}">
+				<button type=button onclick="checkTelePhone()">confirm</button>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
