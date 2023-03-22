@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
-public class mainController {
+public class MainController {
 
 	@GetMapping("/")
 	public String mainPage() {
